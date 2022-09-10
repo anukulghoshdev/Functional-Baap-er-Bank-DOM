@@ -20,8 +20,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     }
 
     const previousWithdrawTotal = getElementPreviousVlaueById('withdraw-total');
-    const newWithdrawTotal = newWithdrawAmmount + previousWithdrawTotal;
-    setTextElementValueById('withdraw-total', newWithdrawTotal);
+    
 
 
     const previousBalanceTotal = getElementPreviousVlaueById('balance-total');
@@ -31,6 +30,8 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
         alert('Withdraw Amount Cross the main Balance! Please input within total balance!!!');
         return;
     }
+    const newWithdrawTotal = newWithdrawAmmount + previousWithdrawTotal;
+    setTextElementValueById('withdraw-total', newWithdrawTotal);
     
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmmount;
     setTextElementValueById('balance-total', newBalanceTotal);
