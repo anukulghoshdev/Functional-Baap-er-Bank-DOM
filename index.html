@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functional Baap er bank</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-slate-200">
+  <header class="w-11/12 mx-auto sm:w-full my-8">
+    <h2 class="bg-cyan-200 text-6xl text-center">Welcome to <span class="text-blue-700 font-semibold">Baap er
+        Bank <span class="text-rose-500 font-semibold">Functional</span></span></h2>
+  </header>
+
+  <main>
+    <section>
+      <div class="grid grid-cols-1 gap-6 w-4/5 mx-auto    lg:grid lg:grid-cols-3 lg:gap-6 lg:w-3/6 lg:mx-auto lg:mt-10
+       sm:grid sm:grid-cols-1 sm:gap-3 sm:m-4 sm:mt-4 sm:w-4/5 sm:mx-auto
+          ">
+        <div class="bg-emerald-400 p-12 rounded-2xl">
+          <h3 class="text-5xl mb-1">$<sapn class="font-medium" id="deposit-total">00</sapn>
+          </h3>
+          <h2  class="text-3xl font-semibold text-zinc-50">Deposit</h2>
+        </div>
+        <div class="bg-amber-400 p-12 rounded-2xl">
+          <h3 class="text-5xl mb-1">$<sapn class="font-medium" id="withdraw-total">00</sapn>
+          </h3>
+          <h2  class="text-3xl font-semibold text-zinc-50">Withdraw</h2>
+        </div>
+        <div class="bg-fuchsia-400 p-12 rounded-2xl">
+          <h3 class="text-5xl mb-1">$<sapn class="font-medium "id="balance-total">00</sapn>
+          </h3>
+          <h2  class="text-3xl font-semibold text-zinc-50">Balance</h2>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section>
+      <div class="grid grid-cols-1 gap-6 w-11/12 mx-auto my-8 
+      lg:grid lg:grid-cols-2 lg:gap-6 lg:w-3/6 lg:mx-auto lg:mt-8 overflow-auto sm: sm:overflow-auto">
+
+
+        <div class="bg-sky-300 p-12 rounded-2xl">
+          <h3 class="text-3xl font-medium mb-4">Please Deposit</h3>
+          <input class="block mb-5 w-64 p-1 rounded border-2 border-stone-900 sm:w-11/12 " type="text" name="" id="deposit-field"
+            placeholder="$ Enter Your Deposit Ammount">
+          <button id="btn-deposit" class="bg-green-500 p-2 rounded text-neutral-50 font-bold" type="submit">Deposit
+            Now</button>
+        </div>
+
+        <div class="bg-indigo-300 p-12 rounded-2xl">
+          <h3 class="text-3xl font-medium mb-4">Please Withdraw</h3>
+          <input class="block mb-5 w-64 p-1 rounded border-2 border-stone-900 sm:w-11/12 " type="text" name="" id="withdraw-field"
+            placeholder="$ Enter Your withdraw Ammount">
+          <button id="btn-withdraw" class="bg-red-400 p-2 rounded text-neutral-50 font-bold" type="submit">Withdraw
+            Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/utilities.js"></script>
+  <script src="js/deposit.js"></script>
+  <script src="js/withdraw.js"></script>
+</body>
+
+</html>
